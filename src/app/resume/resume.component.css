@@ -1,0 +1,192 @@
+/* .containers{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-div{
+    width: 50%;
+    box-shadow: 0px 3px 3px 3px #7f7f90;
+    margin: 20px;
+}
+.d-flex{
+    display: flex!important;
+    justify-content: space-between;
+}
+.contact{
+    background-color: #4e494952;
+    width: 45%;
+    padding: 20px;
+    margin: 20px;
+}
+.contact h3{
+    font-size: 15px;
+}
+span{
+    font-size: 12px;
+}
+.name-div{
+    margin: 20px;
+    border: 2px solid #897c7cb3;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.address-div{
+    width: 100%;
+    padding: 0px 10px 0px 0px;
+    overflow-wrap: anywhere;
+}
+.education{
+    background-color: #67903f94;
+    width: 45%;
+    padding: 30px;
+    margin: 20px;
+}
+.education h3{
+    font-size: 20px;
+}
+.work{
+    background-color: #e6af6891;
+    padding: 30px;
+    text-align: center;
+    margin: 20px;
+}
+.work h3{
+    font-size: 20px;
+}
+.certificate{
+    background-color: #00ffff5c;
+    text-align: center;
+    margin: 20px;
+    padding: 5px;
+}
+
+.skill{
+    background-color: #ffd70094;
+    text-align: center;
+    margin: 20px;
+    padding: 5px;
+}
+h2{
+    border-bottom: 2px solid #0892f4fc;
+    display: inline-block;
+    margin: 10px;
+    font-size: 30px;
+}
+.btn{
+    margin: 20px;
+} */
+.btn-div{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.containers{
+
+    display: flex;
+    
+}
+.side{
+    background-color: #c0d0d0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+.fullname{
+    font-size: 50px !important;
+    margin: 0px;
+    font-weight: 400 !important;
+}
+.side h2{
+    font-size: 19px !important;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.side h3{
+    font-size: 19px !important;
+    font-weight: 500;
+    margin: 0px;
+    text-transform: none;
+    text-align: center;   
+}
+.name{
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    text-transform: capitalize;
+    background: gray;
+}
+.contact{
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    padding-top: 0px;
+}
+.main{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.work{
+    display: flex;
+    align-items: center;
+}
+.work h3{
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work span{
+    font-weight: 400;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+.h1{
+    padding: 30px 0px 0px 30px;
+    font-size: 30px !important;
+}
+.cert{
+    font-size: 25px !important;
+}
+h1{
+    font-size: 30px !important;
+}
+h2{
+    font-weight: 700;
+    font-size: 20px;
+    padding-top: 30px;
+    text-transform: capitalize;
+}
+h3{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.education{
+
+    padding: 30px;
+}
+.certificate{
+    padding: 30px;
+}
+.skill{
+    
+    padding: 30px;
+}
+li{
+    font-size: 20px;
+}

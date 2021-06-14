@@ -1,0 +1,29 @@
+<h1>What's your Education?</h1>
+<div class="containers">
+    <form class="main-div" [formGroup]='eduForm' (ngSubmit)='onSubmit(eduForm)'>
+        <label>
+            COLLAGE NAME:<span class="req">*</span>
+            <input type="text" class="form-control" name="collage" placeholder="COLLAGE NAME"
+                formControlName="collage">
+        </label>
+        <div class="width" *ngIf="eduForm.get('collage').invalid && eduForm.get('collage').touched">
+            <p>Enter Your Collage Name.</p>
+        </div>
+        <label>
+            State:<span class="req">*</span>
+            <input type="text" class="form-control" name="cstate" placeholder="State" formControlName="cstate">
+        </label>
+        <div class="width" *ngIf="eduForm.get('cstate').invalid && eduForm.get('cstate').touched">
+            <p>Enter Your State.</p>
+        </div>
+
+        <label>
+            City:<span class="req">*</span>
+            <input type="text" class="form-control" name="ccity" placeholder="City" formControlName="ccity">
+        </label>
+        <div class="width" *ngIf="eduForm.get('ccity').invalid && eduForm.get('ccity').touched">
+            <p>Enter Your City</p>
+        </div>
+    </form>
+    <button  [disabled]="eduForm.invalid" type="submit" (click)="onSubmit(eduForm)" class="btn btn-primary">Submit</button>
+</div>

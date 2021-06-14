@@ -1,0 +1,12 @@
+<form class="main-div" [formGroup]='skillForm' (ngSubmit)='onSubmit(skillForm)'>
+    <div class="input-div" formArrayName='skills'>
+        <div class="input" *ngFor="let skill of skillControl; let i = index">
+            <input type="text" class="form-control state" placeholder="ADDITIONAL SKILL#{{i+1}}"
+                [formControlName]="i">
+        </div>
+    </div>
+    <div class="btn-div">
+        <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

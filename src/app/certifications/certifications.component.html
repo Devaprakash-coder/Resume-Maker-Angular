@@ -1,0 +1,13 @@
+<form class="main-div" [formGroup]='certForm' (ngSubmit)='onSubmit(certForm)'>
+    <div class="input-div" formArrayName='certificates'>
+        <div class="input" *ngFor="let certificate of certificateControl; let i = index">
+            <input type="text" class="form-control state" placeholder="LICENSE / CERTIFICATION#{{i+1}}"
+                [formControlName]="i">
+        </div>
+    </div>
+    <div class="btn-div">
+        <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

@@ -1,0 +1,24 @@
+nav{
+    background-color: powderblue;
+    padding: 30PX;
+}
+/* nav a{
+    background-color: #827aff;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 600;
+} */
+nav button{
+    background-color: #827aff;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    box-shadow: none;
+}

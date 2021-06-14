@@ -1,0 +1,23 @@
+.btn-div{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+}
+.btn-primary{
+    margin-right: 30px;
+}
+.input-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input{
+    display: flex;
+    width: 70%;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

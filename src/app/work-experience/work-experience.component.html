@@ -1,0 +1,65 @@
+<h1>What's your Experience?</h1>
+<div class="containers">
+    <form class="main-div" [formGroup]='workForm' (ngSubmit)='onSubmit(workForm)'>
+        <label>
+            Job Title:<span class="req">*</span>
+            <input type="text" class="form-control" placeholder="Job Title" formControlName="jtitle">
+        </label>
+        <div *ngIf="workForm.get('jtitle').invalid && workForm.get('jtitle').touched">
+            <p>Please provide Job Title.</p>
+        </div>
+
+        <label>
+            COMPANY / ORGANIZATION NAME:<span class="req">*</span>
+            <input type="text" class="form-control" name="cname" placeholder="COMPANY / ORGANIZATION NAME"
+                formControlName="cname">
+        </label>
+        <div *ngIf="workForm.get('cname').invalid && workForm.get('cname').touched">
+            <p>Enter COMPANY / ORGANIZATION Name.</p>
+        </div>
+        <div class="input-div">
+            <label>
+                State:<span class="req">*</span>
+                <input type="text" class="form-control" name="jstate" placeholder="State" formControlName="jstate">
+            </label>
+            <div *ngIf="workForm.get('jstate').invalid && workForm.get('jstate').touched">
+                <p>Enter Your State.</p>
+            </div>
+
+            <label>
+                City:<span class="req">*</span>
+                <input type="text" class="form-control" name="jcity" placeholder="City" formControlName="jcity">
+            </label>
+            <div *ngIf="workForm.get('jcity').invalid && workForm.get('jcity').touched">
+                <p>Enter Your City</p>
+            </div>
+        </div>
+        <div class="select-div">
+            <select class="form-select" name="smonth" formControlName="smonth">
+                <option value="" selected disabled hidden>Start Month<span class="req">*</span></option>
+                <option *ngFor="let month of months">{{month}}</option>
+            </select>
+            <div class="width" *ngIf="workForm.get('smonth').invalid && workForm.get('smonth').touched">
+                <p>Select Your Start Month.</p>
+            </div>
+
+            <select class="form-select" name="syear" formControlName="syear">
+                <option value="" selected disabled hidden>Start Year<span class="req">*</span></option>
+                <option *ngFor="let year of years">{{year}}</option>
+            </select>
+            <div class="width" *ngIf="workForm.get('syear').invalid && workForm.get('syear').touched">
+                <p>Select Your Start Year.</p>
+            </div>
+            
+            <select class="form-select" name="emonth" formControlName="emonth">
+                <option value="" selected disabled hidden>End Month</option>
+                <option *ngFor="let month of months">{{month}}</option>
+            </select>
+            <select class="form-select" name="eyear" formControlName="eyear">
+                <option value="" selected disabled hidden>End Year</option>
+                <option *ngFor="let year of years">{{year}}</option>
+            </select>
+        </div>
+    </form>
+    <button [disabled]="workForm.invalid" type="submit" (click)="onSubmit(workForm)" class="btn btn-primary">Submit</button>
+</div>

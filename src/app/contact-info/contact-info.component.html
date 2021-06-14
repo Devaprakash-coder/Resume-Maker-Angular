@@ -1,0 +1,76 @@
+<h1>What's your contact information?</h1>
+<div class="containers">
+    <div class="main-div" >
+    <form class="flex" [formGroup]='conForm' (ngSubmit)='onSubmit(conForm)'>
+        <label>
+            FirstName:<span class="req">*</span>
+            <input type="text" class="form-control" placeholder="FirstName" formControlName="fname">
+        </label>
+        <div *ngIf="conForm.get('fname').invalid && conForm.get('fname').touched">
+            <p>Please provide a name.</p>
+        </div>
+        <label>
+            LastName:
+            <input type="text" class="form-control" name="lname" id="lname" placeholder="LastName"formControlName="lname">
+        </label>
+        <label>
+            Email address:<span class="req">*</span>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                formControlName="email">
+        </label>
+        <div *ngIf="conForm.get('email').invalid && conForm.get('email').touched">
+            <p>Email Not Valid.</p>
+        </div>
+        <label>
+            Phone:<span class="req">*</span>
+            <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone"
+                formControlName="phone">
+        </label>
+        <div *ngIf="conForm.get('phone').invalid && conForm.get('phone').touched">
+            <p>Number Not Valid.</p>
+        </div>
+        <label>
+            Address:<span class="req">*</span>
+            <input type="text" class="form-control" name="address" id="address" placeholder="Address"
+                formControlName="address">
+        </label>
+        <div *ngIf="conForm.get('address').invalid && conForm.get('address').touched">
+            <p>Enter Your Address</p>
+        </div>
+        <select class="form-select" name="country" id="country" placeholder="country" formControlName="country">
+            <option value="" selected disabled hidden>Country<span class="req">*</span></option>
+            <option>India</option>
+            <option>Africa</option>
+            <option>America</option>
+            <option>Canada</option>
+        </select>
+        <div *ngIf="conForm.get('country').invalid && conForm.get('country').touched">
+            <p>Select Your Country.</p>
+        </div>
+        <label>
+            City:<span class="req">*</span>
+            <input type="text" class="form-control" name="city" id="city" placeholder="City" formControlName="city">
+        </label>
+        <div *ngIf="conForm.get('state').invalid && conForm.get('state').touched">
+            <p>Enter Your State</p>
+        </div>
+        <label>
+            State:<span class="req">*</span>
+            <input type="text" class="form-control" name="state" id="state" placeholder="State/Province"
+                formControlName="state">
+        </label>
+        <div *ngIf="conForm.get('state').invalid && conForm.get('state').touched">
+            <p>Enter Your State</p>
+        </div>
+        <label>
+            Zipcode:<span class="req">*</span>
+            <input type="number" class="form-control" name="zipcode" id="zipcode" placeholder="Zipcode"
+                formControlName="zipcode">
+        </label>
+        <div *ngIf="conForm.get('zipcode').invalid && conForm.get('zipcode').touched">
+            <p>Enter Your Zipcode</p>
+        </div>
+    </form>
+    <button [disabled]="conForm.invalid" (click)="onSubmit(conForm)" type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>

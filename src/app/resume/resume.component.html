@@ -1,0 +1,46 @@
+<div class="btn-div">
+<button class="btn btn-primary" type="button" (click)="openPDF()">Download</button>
+</div>
+<div class="containers" id="htmlData">
+    <div class="side" *ngFor="let contact of contacts">
+        <div class="name">
+            <h1 class="fullname">{{contact.fname + " " + contact.lname}}</h1>
+        </div>
+        <div class="contact">
+            <div>
+                <h2>{{contact.address}}</h2>
+                <h2>{{contact.city + "," + contact.state + "," + contact.zipcode}}</h2>
+                <h3>{{contact.phone}}</h3>
+                <h3>{{contact.email}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <h1 class="h1">Experience:</h1>
+        <div class="work" *ngFor="let work of works">
+
+            <h3>{{"(" + work.smonth + " " + work.syear + "-" + work.emonth + " " + work.eyear + ")"}}</h3>
+            <div>
+                <h4>{{work.jtitle}}</h4>
+                <h5>{{work.cname |titlecase}}<span>{{"(" + work.jcity + "," + work.jstate + ")"}}</span></h5>
+            </div>
+        </div>
+        <div class="education" *ngFor="let education of educations">
+            <h1>Education:</h1>
+            <h2>{{education.collage}}</h2>
+            <h3>{{education.ccity + "," + education.cstate}}</h3>
+        </div>
+        <div class="certificate">
+            <h1 class="cert">CERTIFICATIONS:</h1>
+            <ul *ngFor="let certificate of certificates">
+                <li>{{certificate}}</li>
+            </ul>
+        </div>
+        <div class="skill">
+            <h1>Skills:</h1>
+            <ul *ngFor="let skill of skills">
+                <li>{{skill}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
